@@ -3,6 +3,7 @@ venv/
 
 # models
 assets/
+models/
 learning.md
 
 # other
