@@ -29,3 +29,9 @@
 - [图像检索系列——利用深度学习实现以图搜图](https://zhuanlan.zhihu.com/p/80886534)
 - [Python Numpy计算各类距离](https://blog.csdn.net/qq_19707521/article/details/78479532)
 - [实现图像检索系统大概的步骤，需要用到哪方面的知识？](https://www.zhihu.com/question/25833727)
+
+
+## pip 安装问题
+
+1. 使用python3环境，并进行pip升级`pip install --upgrade pip`
+2. 安装以下模块`pip install -r requirements.txt`

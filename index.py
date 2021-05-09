@@ -19,7 +19,7 @@ def get_imlist(path):
 '''
 if __name__ == "__main__":
     database = 'database'
-    index = 'models/vgg_featureCNN.h5'
+    index = 'models/vgg_featureCNN.resnet50.h5'
     img_list = get_imlist(database)
 
     print("--------------------------------------------------")
@@ -31,7 +31,8 @@ if __name__ == "__main__":
 
     model = VGGNet()
     for i, img_path in enumerate(img_list):
-        norm_feat = model.vgg_extract_feat(img_path)  # 修改此处改变提取特征的网络
+        # norm_feat = model.vgg_extract_feat(img_path)  # 修改此处改变提取特征的网络
+        norm_feat = model.resnet_extract_feat(img_path)  # 修改此处改变提取特征的网络
         img_name = os.path.split(img_path)[1]
         feats.append(norm_feat)
         names.append(img_name)

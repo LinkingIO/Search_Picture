@@ -7,7 +7,7 @@ import numpy as np
 from extract_cnn_vgg16_keras import VGGNet
 
 query = 'test.jpg'
-index = 'models/vgg_featureCNN.h5'
+index = 'models/vgg_featureCNN.resnet50.h5'
 result = 'database'
 # read in indexed images' feature vectors and corresponding image names
 h5f = h5py.File(index, 'r')
@@ -29,7 +29,8 @@ plt.show()
 model = VGGNet()
 
 # extract query image's feature, compute simlarity score and sort
-queryVec = model.vgg_extract_feat(query)  # 修改此处改变提取特征的网络
+# queryVec = model.vgg_extract_feat(query)  # 修改此处改变提取特征的网络
+queryVec = model.resnet_extract_feat(query)  # 修改此处改变提取特征的网络
 # print(queryVec.shape)
 # print(feats.shape)
 print('--------------------------')
